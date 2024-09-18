@@ -7,13 +7,12 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="developers's blog">
-      <link rel="shortcut icon" href="/static/favicon.ico">
+      <link rel="shortcut icon" href="/progblog/static/favicon.ico">
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-      <script defer src="/static/assets/js/all.js"></script>
-      <link id="theme-style" rel="stylesheet" href="/static/assets/css/theme-1.css">
-      <link id="blog-style" rel="stylesheet" href="/static/assets/css/blog_style.css">
-      <link id="code-style" rel="stylesheet" href="/static/assets/css/dracula.css">
-      <base href="/progblog/">
+      <script defer src="/progblog/static/assets/js/all.js"></script>
+      <link id="theme-style" rel="stylesheet" href="/progblog/static/assets/css/theme-1.css">
+      <link id="blog-style" rel="stylesheet" href="/progblog/static/assets/css/blog_style.css">
+      <link id="code-style" rel="stylesheet" href="/progblog/static/assets/css/dracula.css">
    </head>
    <body>
       <header class="header text-center">
@@ -26,7 +25,7 @@
    </button>
    <div id="navigation" class="collapse navbar-collapse flex-column" >
       <div class="profile-section pt-3 pt-lg-0">
-         <a href="/"><img class="profile-image mb-3 rounded-circle mx-auto" src="/static/assets/img/profile.png" alt="image"></a>            
+         <a href="/"><img class="profile-image mb-3 rounded-circle mx-auto" src="/progblog/static/assets/img/profile.png" alt="image"></a>            
          <ul class="social-list list-inline py-2 mx-auto">
             <li class="list-inline-item"><a href="javascript:void(0);"><i class="fab fa-telegram fa-fw"></i></a></li>
             <li class="list-inline-item"><a href="javascript:void(0);"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
@@ -38,29 +37,29 @@
       </div>
       <ul class="navbar-nav flex-column text-start">
          <li class="nav-item">
-            <a class="nav-link" href="/tags/backend.html"><i class="fas fa-computer fa-fw me-2"></i>Бэкенд</a>
+            <a class="nav-link" href="/progblog/tags/backend.html"><i class="fas fa-computer fa-fw me-2"></i>Бэкенд</a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="/tags/frontend.html"><i class="fas fa-laptop-code fa-fw me-2"></i>Фронтенд</a>
+            <a class="nav-link" href="/progblog/tags/frontend.html"><i class="fas fa-laptop-code fa-fw me-2"></i>Фронтенд</a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="/tags/projects.html"><i class="fas fa-briefcase fa-fw me-2"></i>Проекты</a>
+            <a class="nav-link" href="/progblog/tags/projects.html"><i class="fas fa-briefcase fa-fw me-2"></i>Проекты</a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="/tags/ideas.html"><i class="fas fa-blog fa-fw me-2"></i>Идеи</a>
+            <a class="nav-link" href="/progblog/tags/ideas.html"><i class="fas fa-blog fa-fw me-2"></i>Идеи</a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="/tags/answers.html"><i class="fas fa-envelope-open-text fa-fw me-2"></i>Ответы на вопросы</a>
+            <a class="nav-link" href="/progblog/tags/answers.html"><i class="fas fa-envelope-open-text fa-fw me-2"></i>Ответы на вопросы</a>
          </li>
          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fas fa-cogs fa-fw me-2"></i>Другие темы
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <li><a class="dropdown-item" href="/tags/kubernetes.html">Kubernetes</a></li>
-               <li><a class="dropdown-item" href="/tags/docker.html">Docker</a></li>
-               <li><a class="dropdown-item" href="/tags/ubuntu.html">Ubuntu</a></li>
-               <li><a class="dropdown-item" href="/tags/mint.html">Linux Mint</a></li>
+               <li><a class="dropdown-item" href="/progblog/tags/kubernetes.html">Kubernetes</a></li>
+               <li><a class="dropdown-item" href="/progblog/tags/docker.html">Docker</a></li>
+               <li><a class="dropdown-item" href="/progblog/tags/ubuntu.html">Ubuntu</a></li>
+               <li><a class="dropdown-item" href="/progblog/tags/mint.html">Linux Mint</a></li>
             </ul>
          </li>
       </ul>
@@ -87,7 +86,7 @@
       </header>
       <div class="blog-post-body">
          <figure class="blog-banner">
-            <a href="//media/images/picture12.png"><img class="img-fluid" src="/media/images/picture12.png" alt="image"></a>
+            <a href="//progblog/media/images/picture12.png"><img class="img-fluid" src="/progblog/media/images/picture12.png" alt="image"></a>
          </figure>
          <p><p>В этой статье мы рассмотрим, как создать базовый блог на Django с использованием представлений для работы с постами. Мы будем реализовать функциональность для вывода всех записей, одной записи, а также по тегам и категориям.</p>
 
@@ -121,7 +120,7 @@ from taggit.models import TagBase, TaggedItemBase
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    tags = models.ManyToManyField('Tag', blank=True)
+    progblog/tags = models.ManyToManyField('Tag', blank=True)
     category = models.ForeignKey('Category', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
@@ -156,14 +155,14 @@ class TaggedPost(TaggedItemBase):
 
 <pre><code>
 from django.urls import path
-from .views import post_list, post_detail, tag_posts, category_posts
+from .views import post_list, post_detail, tag_progblog/posts, category_progblog/posts
 
 urlpatterns = [
     # Остальные URL-ы вашего приложения
     path('', post_list, name='post_list'),
     path('<int:year>/<int:month>/<int:day>/<slug:post>/', post_detail, name='post_detail'),
-    path('tag/<slug:tag_slug>/', tag_posts, name='posts_by_tag'),
-    path('category/<slug:category_slug>/', category_posts, name='posts_by_category'),
+    path('tag/<slug:tag_slug>/', tag_progblog/posts, name='progblog/posts_by_tag'),
+    path('category/<slug:category_slug>/', category_progblog/posts, name='progblog/posts_by_category'),
 ]
 </code></pre>
 
@@ -178,8 +177,8 @@ from django.shortcuts import render
 from .models import Post
 
 def post_list(request):
-    posts = Post.objects.all()
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    progblog/posts = Post.objects.all()
+    return render(request, 'blog/post_list.html', {'progblog/posts': progblog/posts})
 </code></pre>
 
 <h3>post_detail.py</h3>
@@ -193,29 +192,29 @@ def post_detail(request, year, month, day, slug):
     return render(request, 'blog/post_detail.html', {'post': post})
 </code></pre>
 
-<h3>tag_posts.py</h3>
+<h3>tag_progblog/posts.py</h3>
 
 <pre><code>
 from django.shortcuts import render
 from .models import TaggedPost, Post
 
-def tag_posts(request, slug):
+def tag_progblog/posts(request, slug):
     tag = Tag.objects.get(slug=slug)
-    tagged_posts = TaggedPost.objects.filter(tag=tag).select_related('content_object')
-    posts = [post.content_object for post in tagged_posts]
-    return render(request, 'blog/tag_posts.html', {'tag': tag, 'posts': posts})
+    tagged_progblog/posts = TaggedPost.objects.filter(tag=tag).select_related('content_object')
+    progblog/posts = [post.content_object for post in tagged_progblog/posts]
+    return render(request, 'blog/tag_progblog/posts.html', {'tag': tag, 'progblog/posts': progblog/posts})
 </code></pre>
 
-<h3>category_posts.py</h3>
+<h3>category_progblog/posts.py</h3>
 
 <pre><code>
 from django.shortcuts import render
 from .models import Category, Post
 
-def category_posts(request, slug):
+def category_progblog/posts(request, slug):
     category = Category.objects.get(slug=slug)
-    posts = Post.objects.filter(category=category)
-    return render(request, 'blog/category_posts.html', {'category': category, 'posts': posts})
+    progblog/posts = Post.objects.filter(category=category)
+    return render(request, 'blog/category_progblog/posts.html', {'category': category, 'progblog/posts': progblog/posts})
 </code></pre>
 
 <h2>Шаблоны</h2>
@@ -229,7 +228,7 @@ def category_posts(request, slug):
 
 {% block content %}
   <h1>Все посты</h1>
-  {% for post in posts %}
+  {% for post in progblog/posts %}
     <article>
       <h2><a href="{% url 'post_detail' year=post.pub_date.year month=post.pub_date.month day=post.pub_date.day slug=post.slug %}">{{ post.title }}</a></h2>
       <p>{{ post.content|truncatewords:30 }}</p>
@@ -249,21 +248,21 @@ def category_posts(request, slug):
   <p>{{ post.content|safe }}</p>
   <h3>Теги:</h3>
   <ul>
-    {% for tag in post.tags.all %}
-      <li><a href="{% url 'posts_by_tag' tag.slug %}">{{ tag }}</a></li>
+    {% for tag in post.progblog/tags.all %}
+      <li><a href="{% url 'progblog/posts_by_tag' tag.slug %}">{{ tag }}</a></li>
     {% endfor %}
   </ul>
 {% endblock %}
 </code></pre>
 
-<h3>tag_posts.html</h3>
+<h3>tag_progblog/posts.html</h3>
 
 <pre><code>
 {% extends 'base.html' %}
 
 {% block content %}
   <h1>Посты по тегу "{{ tag }}"</h1>
-  {% for post in posts %}
+  {% for post in progblog/posts %}
     <article>
       <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
       <p>{{ post.content|truncatewords:30 }}</p>
@@ -272,14 +271,14 @@ def category_posts(request, slug):
 {% endblock %}
 </code></pre>
 
-<h3>category_posts.html</h3>
+<h3>category_progblog/posts.html</h3>
 
 <pre><code>
 {% extends 'base.html' %}
 
 {% block content %}
   <h1>Посты в категории "{{ category }}"</h1>
-  {% for post in posts %}
+  {% for post in progblog/posts %}
     <article>
       <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
       <p>{{ post.content|truncatewords:30 }}</p>
@@ -300,7 +299,7 @@ from taggit.managers import TaggableManager
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    tags = TaggableManager()
+    progblog/tags = TaggableManager()
 
     def __str__(self):
         return self.title
@@ -334,18 +333,18 @@ python manage.py runserver
 <p>Этот пример демонстрирует, как Django позволяет легко создавать сложные веб-приложения с помощью его ORM и готовых компонентов.</p></p>
          <div class="mt-5">
             
-            <span class="bg-primary rounded-pill px-2 py-1 me-2"><a class="text-decoration-none text-white card-text" href="/tags/backend.html">backend</a></span>
+            <span class="bg-primary rounded-pill px-2 py-1 me-2"><a class="text-decoration-none text-white card-text" href="/progblog/tags/backend.html">backend</a></span>
             
-            <span class="bg-primary rounded-pill px-2 py-1 me-2"><a class="text-decoration-none text-white card-text" href="/tags/django.html">django</a></span>
+            <span class="bg-primary rounded-pill px-2 py-1 me-2"><a class="text-decoration-none text-white card-text" href="/progblog/tags/django.html">django</a></span>
             
          </div>
       </div>
       <nav class="blog-nav nav nav-justified my-5">
          
-         <a class="nav-link-prev nav-item nav-link rounded-left" href="/posts/kartochka-na-bootstrap-52.html">Предыдущая запись<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+         <a class="nav-link-prev nav-item nav-link rounded-left" href="/progblog/posts/kartochka-na-bootstrap-52.html">Предыдущая запись<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
          
          
-         <a class="nav-link-next nav-item nav-link rounded-right" href="/posts/tajmer-perehoda-po-ssylke.html">Следующая запись<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+         <a class="nav-link-next nav-item nav-link rounded-right" href="/progblog/posts/tajmer-perehoda-po-ssylke.html">Следующая запись<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
          
       </nav>
       <a href="/" target="_self" class="btn btn-danger">На главную</a>
@@ -362,25 +361,25 @@ python manage.py runserver
       <a id="config-trigger" class="config-trigger text-center" href="javascript:void(0);"><i class="fas fa-cog mx-auto" data-fa-transform="down-6" ></i></a>
       <h5 class="panel-title">Выберите тему</h5>
       <ul id="color-options" class="list-inline mb-0">
-         <li class="theme-1 active list-inline-item"><a data-style="/static/assets/css/theme-1.css" href="javascript:void(0);"></a></li>
-         <li class="theme-2  list-inline-item"><a data-style="/static/assets/css/theme-2.css" href="javascript:void(0);"></a></li>
-         <li class="theme-3  list-inline-item"><a data-style="/static/assets/css/theme-3.css" href="javascript:void(0);"></a></li>
-         <li class="theme-4  list-inline-item"><a data-style="/static/assets/css/theme-4.css" href="javascript:void(0);"></a></li>
-         <li class="theme-5  list-inline-item"><a data-style="/static/assets/css/theme-5.css" href="javascript:void(0);"></a></li>
-         <li class="theme-6  list-inline-item"><a data-style="/static/assets/css/theme-6.css" href="javascript:void(0);"></a></li>
-         <li class="theme-7  list-inline-item"><a data-style="/static/assets/css/theme-7.css" href="javascript:void(0);"></a></li>
-         <li class="theme-8  list-inline-item"><a data-style="/static/assets/css/theme-8.css" href="javascript:void(0);"></a></li>
-         <li class="theme-9  list-inline-item"><a data-style="/static/assets/css/theme-9.css" href="javascript:void(0);"></a></li>
-         <li class="theme-10  list-inline-item"><a data-style="/static/assets/css/theme-10.css" href="javascript:void(0);"></a></li>
+         <li class="theme-1 active list-inline-item"><a data-style="/progblog/static/assets/css/theme-1.css" href="javascript:void(0);"></a></li>
+         <li class="theme-2  list-inline-item"><a data-style="/progblog/static/assets/css/theme-2.css" href="javascript:void(0);"></a></li>
+         <li class="theme-3  list-inline-item"><a data-style="/progblog/static/assets/css/theme-3.css" href="javascript:void(0);"></a></li>
+         <li class="theme-4  list-inline-item"><a data-style="/progblog/static/assets/css/theme-4.css" href="javascript:void(0);"></a></li>
+         <li class="theme-5  list-inline-item"><a data-style="/progblog/static/assets/css/theme-5.css" href="javascript:void(0);"></a></li>
+         <li class="theme-6  list-inline-item"><a data-style="/progblog/static/assets/css/theme-6.css" href="javascript:void(0);"></a></li>
+         <li class="theme-7  list-inline-item"><a data-style="/progblog/static/assets/css/theme-7.css" href="javascript:void(0);"></a></li>
+         <li class="theme-8  list-inline-item"><a data-style="/progblog/static/assets/css/theme-8.css" href="javascript:void(0);"></a></li>
+         <li class="theme-9  list-inline-item"><a data-style="/progblog/static/assets/css/theme-9.css" href="javascript:void(0);"></a></li>
+         <li class="theme-10  list-inline-item"><a data-style="/progblog/static/assets/css/theme-10.css" href="javascript:void(0);"></a></li>
       </ul>
       <a id="config-close" class="close" href="javascript:void(0);"><i class="fa fa-times-circle"></i></a>
    </div>
 </div>
-      <script src="/static/assets/js/popper.min.js"></script> 
-      <script src="/static/assets/js/bootstrap.min.js"></script>
-      <script src="/static/assets/js/style-switcher.js"></script>
-      <script src="/static/assets/js/dark-mode.js"></script>  
-      <script src="/static/assets/js/highlight.min.js"></script>
-      <script src="/static/assets/js/blog.js"></script>  
+      <script src="/progblog/static/assets/js/popper.min.js"></script> 
+      <script src="/progblog/static/assets/js/bootstrap.min.js"></script>
+      <script src="/progblog/static/assets/js/style-switcher.js"></script>
+      <script src="/progblog/static/assets/js/dark-mode.js"></script>  
+      <script src="/progblog/static/assets/js/highlight.min.js"></script>
+      <script src="/progblog/static/assets/js/blog.js"></script>  
    </body>
 </html>
