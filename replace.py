@@ -1,8 +1,10 @@
 import os
 
-# Указываем шаблон для поиска и замены
-old_string = 'static'
-new_string = 'progblog/static'
+# Указываем шаблоны для поиска и замены
+replacements = {
+    'static': 'progblog/static',
+    'media': 'progblog/media'
+}
 
 # Получаем текущую директорию
 current_dir = os.getcwd()
@@ -17,13 +19,15 @@ for root, dirs, files in os.walk(current_dir):
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
 
-            # Проверяем, есть ли в файле строка для замены
-            if old_string in content:
-                # Заменяем все вхождения old_string на new_string
-                updated_content = content.replace(old_string, new_string)
-                
-                # Перезаписываем файл с обновленным содержимым
+            # Проверяем, есть ли в файле строки для замены
+            updated_content = content
+            for old_string, new_string in replacements.items():
+                if old_string in updated_content:
+                    # Заменяем все вхождения old_string на new_string
+                    updated_content = updated_content.replace(old_string, new_string)
+
+            # Если были изменения, перезаписываем файл с обновленным содержимым
+            if updated_content != content:
                 with open(file_path, 'w', encoding='utf-8') as f:
                     f.write(updated_content)
-
                 print(f"Изменения внесены в файл: {file_path}")
