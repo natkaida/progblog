@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Блог разработчика - </title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="developers's blog">
+      <link rel="shortcut icon" href="/static/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+      <script defer src="/static/assets/js/all.js"></script>
+      <link id="theme-style" rel="stylesheet" href="/static/assets/css/theme-1.css">
+      <link id="blog-style" rel="stylesheet" href="/static/assets/css/blog_style.css">
+      <link id="code-style" rel="stylesheet" href="/static/assets/css/dracula.css">
+   </head>
+   <body>
+      <header class="header text-center">
+         <div class="force-overflow">
+            <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="/">Евгений Онегин</a></h1>
+            
+<nav class="navbar navbar-expand-lg navbar-dark" >
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <div id="navigation" class="collapse navbar-collapse flex-column" >
+      <div class="profile-section pt-3 pt-lg-0">
+         <a href="/"><img class="profile-image mb-3 rounded-circle mx-auto" src="/static/assets/img/profile.png" alt="image"></a>            
+         <ul class="social-list list-inline py-2 mx-auto">
+            <li class="list-inline-item"><a href="#"><i class="fab fa-telegram fa-fw"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+         </ul>
+         <hr>
+      </div>
+      <ul class="navbar-nav flex-column text-start">
+         <li class="nav-item">
+            <a class="nav-link" href="/tags/backend.html"><i class="fas fa-computer fa-fw me-2"></i>Бэкенд</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/tags/frontend.html"><i class="fas fa-laptop-code fa-fw me-2"></i>Фронтенд</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/tags/projects.html"><i class="fas fa-briefcase fa-fw me-2"></i>Проекты</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/tags/ideas.html"><i class="fas fa-blog fa-fw me-2"></i>Идеи</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/tags/answers.html"><i class="fas fa-envelope-open-text fa-fw me-2"></i>Ответы на вопросы</a>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-cogs fa-fw me-2"></i>Другие темы
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <li><a class="dropdown-item" href="/tags/kubernetes.html">Kubernetes</a></li>
+               <li><a class="dropdown-item" href="/tags/docker.html">Docker</a></li>
+               <li><a class="dropdown-item" href="/tags/ubuntu.html">Ubuntu</a></li>
+               <li><a class="dropdown-item" href="/tags/mint.html">Linux Mint</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="my-2">
+         <a class="btn btn-primary" href="/contact.html"><i class="fas fa-paper-plane me-2"></i>Сообщение</a>
+      </div>
+      <div class="dark-mode-toggle text-center w-100">
+         <hr class="mb-4">
+         <h4 class="toggle-name mb-3 "><i class="fas fa-adjust me-1"></i>Темная/светлая тема</h4>
+         <input class="toggle" id="darkmode" type="checkbox">
+         <label class="toggle-btn mx-auto mb-0" for="darkmode"></label>                        
+      </div>
+   </div>
+</nav>
+         </div>
+      </header>
+      <div class="main-wrapper">
+         
+<article class="blog-post px-3 py-5 p-md-5">
+   <div class="container single-col-max-width">
+      <header class="blog-post-header">
+         <h2 class="title mb-2">Преимущества React</h2>
+         <div class="meta mb-3"><span class="date">8 сентября 2024 г. 18:26</span><span>Время на чтение: 3 мин</span></div>
+      </header>
+      <div class="blog-post-body">
+         <figure class="blog-banner">
+            <a href="//media/images/picture20.png"><img class="img-fluid" src="/media/images/picture20.png" alt="image"></a>
+         </figure>
+         <p><p>Библиотека React является одним из самых популярных и широко используемых инструментов для разработки пользовательских интерфейсов веб-приложений. Давайте рассмотрим основные преимущества использования React:</p>
+    
+    <h2>Компонентная архитектура</h2>
+    <p>React предлагает компонентную структуру, которая позволяет разбивать сложное приложение на небольшие, переиспользуемые части. Это упрощает разработку, тестирование и поддержку кода.</p>
+    <ul>
+        <li>Каждый компонент представляет собой независимую единицу с собственным состоянием и логикой отображения.</li>
+        <li>Компоненты легко комбинировать и повторно использовать в разных частях приложения.</li>
+    </ul>
+    
+    <h2>Виртуальный DOM (Virtual DOM)</h2>
+    <p>React использует концепцию Virtual DOM, что значительно улучшает производительность рендеринга:</p>
+    <ul>
+        <li>При изменении состояния компонента React создает новое дерево Virtual DOM.</li>
+        <li>Затем сравнивает его с предыдущей версией и определяет минимальный набор изменений.</li>
+        <li>Только эти изменения применяются к реальному DOM, что ускоряет процесс обновления страницы.</li>
+    </ul>
+    
+    <h2>Управление состоянием</h2>
+    <p>React предоставляет мощные инструменты для управления состоянием приложения:</p>
+    <ul>
+        <li>Хуки (например, useState, useEffect) позволяют управлять состоянием функциональных компонентов.</li>
+        <li>Redux или другие библиотеки могут быть использованы для управления глобальным состоянием приложения.</li>
+    </ul>
+    
+    <h2>Декларативный подход</h2>
+    <p>React использует декларативный стиль программирования, что делает код более читаемым и предсказуемым:</p>
+    <ul>
+        <li>Вместо того чтобы описывать, как обновить UI, вы просто объявляете, как должен выглядеть UI в данный момент.</li>
+        <li>Это упрощает отладку и понимание работы приложения.</li>
+    </ul>
+    
+    <h2>Большая экосистема</h2>
+    <p>React имеет огромное сообщество разработчиков и богатую экосистему инструментов и библиотек:</p>
+    <ul>
+        <li>Наличие множества готовых решений для различных задач (например, React Router для маршрутизации).</li>
+        <li>Легкость интеграции с другими популярными библиотеками и фреймворками.</li>
+    </ul>
+    
+    <h2>Кроссплатформенная разработка</h2>
+    <p>React может быть использован не только для веб-разработки, но и для создания мобильных приложений:</p>
+    <ul>
+        <li>React Native позволяет использовать React для разработки нативных мобильных приложений под iOS и Android.</li>
+        <li>Это позволяет разрабатывать кроссплатформенные решения с минимальным дублированием кода.</li>
+    </ul>
+    
+    <h2>Универсальность</h2>
+    <p>React можно использовать как часть большего проекта или как основной фреймворк:</p>
+    <ul>
+        <li>Легко интегрируется с существующими проектами на других технологиях.</li>
+        <li>Может быть использован как для небольших компонентов, так и для сложных одностраничных приложений.</li>
+    </ul>
+    
+    <p>В целом, React предоставляет мощные инструменты для эффективного создания интерактивных пользовательских интерфейсов, что делает его популярным выбором среди разработчиков веб-приложений.</p></p>
+         <div class="mt-5">
+            
+            <span class="bg-primary rounded-pill px-2 py-1 me-2"><a class="text-decoration-none text-white card-text" href="/tags/react.html">react</a></span>
+            
+            <span class="bg-primary rounded-pill px-2 py-1 me-2"><a class="text-decoration-none text-white card-text" href="/tags/frontend.html">frontend</a></span>
+            
+         </div>
+      </div>
+      <nav class="blog-nav nav nav-justified my-5">
+         
+         
+         <a class="nav-link-next nav-item nav-link rounded-right" href="/posts/nodejs-dlya-nachinayushih.html">Следующая запись<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+         
+      </nav>
+      <a href="/" target="_self" class="btn btn-danger">На главную</a>
+   </div>
+</article>
+
+         <footer class="footer text-center py-4">
+            <small class="copyright">Блог разработчика &copy; 2024 Eugene Onegin</small>
+         </footer>
+      </div>
+      
+<div id="config-panel" class="config-panel config-panel-hide d-none d-lg-block">
+   <div class="panel-inner">
+      <a id="config-trigger" class="config-trigger text-center" href="#"><i class="fas fa-cog mx-auto" data-fa-transform="down-6" ></i></a>
+      <h5 class="panel-title">Выберите тему</h5>
+      <ul id="color-options" class="list-inline mb-0">
+         <li class="theme-1 active list-inline-item"><a data-style="/static/assets/css/theme-1.css" href="#"></a></li>
+         <li class="theme-2  list-inline-item"><a data-style="/static/assets/css/theme-2.css" href="#"></a></li>
+         <li class="theme-3  list-inline-item"><a data-style="/static/assets/css/theme-3.css" href="#"></a></li>
+         <li class="theme-4  list-inline-item"><a data-style="/static/assets/css/theme-4.css" href="#"></a></li>
+         <li class="theme-5  list-inline-item"><a data-style="/static/assets/css/theme-5.css" href="#"></a></li>
+         <li class="theme-6  list-inline-item"><a data-style="/static/assets/css/theme-6.css" href="#"></a></li>
+         <li class="theme-7  list-inline-item"><a data-style="/static/assets/css/theme-7.css" href="#"></a></li>
+         <li class="theme-8  list-inline-item"><a data-style="/static/assets/css/theme-8.css" href="#"></a></li>
+         <li class="theme-9  list-inline-item"><a data-style="/static/assets/css/theme-9.css" href="#"></a></li>
+         <li class="theme-10  list-inline-item"><a data-style="/static/assets/css/theme-10.css" href="#"></a></li>
+      </ul>
+      <a id="config-close" class="close" href="#"><i class="fa fa-times-circle"></i></a>
+   </div>
+</div>
+      <script src="/static/assets/js/popper.min.js"></script> 
+      <script src="/static/assets/js/bootstrap.min.js"></script>
+      <script src="/static/assets/js/style-switcher.js"></script>
+      <script src="/static/assets/js/dark-mode.js"></script>  
+      <script src="/static/assets/js/highlight.min.js"></script>
+      <script src="/static/assets/js/blog.js"></script>  
+   </body>
+</html>

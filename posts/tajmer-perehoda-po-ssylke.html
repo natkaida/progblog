@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Блог разработчика - </title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="developers's blog">
+      <link rel="shortcut icon" href="/static/favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+      <script defer src="/static/assets/js/all.js"></script>
+      <link id="theme-style" rel="stylesheet" href="/static/assets/css/theme-1.css">
+      <link id="blog-style" rel="stylesheet" href="/static/assets/css/blog_style.css">
+      <link id="code-style" rel="stylesheet" href="/static/assets/css/dracula.css">
+   </head>
+   <body>
+      <header class="header text-center">
+         <div class="force-overflow">
+            <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="/">Евгений Онегин</a></h1>
+            
+<nav class="navbar navbar-expand-lg navbar-dark" >
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <div id="navigation" class="collapse navbar-collapse flex-column" >
+      <div class="profile-section pt-3 pt-lg-0">
+         <a href="/"><img class="profile-image mb-3 rounded-circle mx-auto" src="/static/assets/img/profile.png" alt="image"></a>            
+         <ul class="social-list list-inline py-2 mx-auto">
+            <li class="list-inline-item"><a href="#"><i class="fab fa-telegram fa-fw"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
+         </ul>
+         <hr>
+      </div>
+      <ul class="navbar-nav flex-column text-start">
+         <li class="nav-item">
+            <a class="nav-link" href="/tags/backend.html"><i class="fas fa-computer fa-fw me-2"></i>Бэкенд</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/tags/frontend.html"><i class="fas fa-laptop-code fa-fw me-2"></i>Фронтенд</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/tags/projects.html"><i class="fas fa-briefcase fa-fw me-2"></i>Проекты</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/tags/ideas.html"><i class="fas fa-blog fa-fw me-2"></i>Идеи</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/tags/answers.html"><i class="fas fa-envelope-open-text fa-fw me-2"></i>Ответы на вопросы</a>
+         </li>
+         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-cogs fa-fw me-2"></i>Другие темы
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <li><a class="dropdown-item" href="/tags/kubernetes.html">Kubernetes</a></li>
+               <li><a class="dropdown-item" href="/tags/docker.html">Docker</a></li>
+               <li><a class="dropdown-item" href="/tags/ubuntu.html">Ubuntu</a></li>
+               <li><a class="dropdown-item" href="/tags/mint.html">Linux Mint</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="my-2">
+         <a class="btn btn-primary" href="/contact.html"><i class="fas fa-paper-plane me-2"></i>Сообщение</a>
+      </div>
+      <div class="dark-mode-toggle text-center w-100">
+         <hr class="mb-4">
+         <h4 class="toggle-name mb-3 "><i class="fas fa-adjust me-1"></i>Темная/светлая тема</h4>
+         <input class="toggle" id="darkmode" type="checkbox">
+         <label class="toggle-btn mx-auto mb-0" for="darkmode"></label>                        
+      </div>
+   </div>
+</nav>
+         </div>
+      </header>
+      <div class="main-wrapper">
+         
+<article class="blog-post px-3 py-5 p-md-5">
+   <div class="container single-col-max-width">
+      <header class="blog-post-header">
+         <h2 class="title mb-2">Таймер перехода по ссылке</h2>
+         <div class="meta mb-3"><span class="date">17 сентября 2024 г. 17:05</span><span>Время на чтение: 7 мин</span></div>
+      </header>
+      <div class="blog-post-body">
+         <figure class="blog-banner">
+            <a href="//media/images/picture17.png"><img class="img-fluid" src="/media/images/picture17.png" alt="image"></a>
+         </figure>
+         <p><p>Таймер перехода по ссылке - это популярная техника, которую часто используют маркетологи и дизайнеры для повышения вовлеченности пользователей и увеличения времени на сайте. В этой статье мы рассмотрим, как создать такой таймер с использованием HTML, CSS и JavaScript.</p>
+
+<h2>Базовая структура HTML</h2>
+
+<p>Начнем с базовой структуры HTML:</p>
+
+<pre><code>&lt;h2&gt;Время осталось: &lt;span id="time"&gt;5&lt;/span&gt; секунд&lt;/h2&gt;
+&lt;button id="closeBtn"&gt;Закрыть&lt;/button&gt;</code></pre>
+
+<h2>Стилизация с помощью CSS</h2>
+
+<p>Добавим стили с помощью файла styles.css:</p>
+
+<pre><code>
+.timer-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+#time {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#closeBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#closeBtn:hover {
+    background-color: #0056b3;
+}
+</code></pre>
+
+<h2>JavaScript для таймера</h2>
+
+<p>Теперь добавим JavaScript для работы таймера:</p>
+
+<pre><code>
+document.addEventListener('DOMContentLoaded', function() {
+    const timer = 5; // кол-ко секунд
+    const timeDisplay = document.getElementById('time');
+    const closeBtn = document.getElementById('closeBtn');
+
+    let intervalId;
+
+    function countdown() {
+        clearInterval(intervalId);
+        intervalId = setInterval(() => {
+            timeDisplay.textContent = timer > 0 ? timer : '0';
+            timer--;
+            if (timer === 0) {
+                window.location.href = 'https://example.com'; // URL для перехода
+            }
+        }, 1000); // обновление каждую секунду
+    }
+
+    countdown();
+
+    closeBtn.addEventListener('click', () => {
+        clearInterval(intervalId);
+        window.location.href = 'https://example.com'; // URL для перехода
+    });
+});
+</code></pre>
+
+<h2>Как это работает</h2>
+
+<p>Давайте разберем код на JavaScript:</p>
+
+<ol>
+    <li>Мы создаем переменную `timer`, которая хранит количество секунд.</li>
+    <li>Выбираем элементы DOM для отображения времени и кнопки закрытия.</li>
+    <li>Создаем функцию `countdown()`, которая запускает таймер.</li>
+    <li>Используем `setInterval()` для обновления отображения времени каждую секунду.</li>
+    <li>Когда время истекает, выполняем переход по указанному URL.</li>
+    <li>Добавляем обработчик клика для кнопки закрытия.</li>
+</ol>
+
+<h2>Настройка и использование</h2>
+
+<p>Чтобы использовать этот таймер:</p>
+
+<ol>
+    <li>Замените `'https://example.com'` на нужный вам URL.</li>
+    <li>Измените значение `timer` в зависимости от желаемого количества секунд.</li>
+    <li>Убедитесь, что файлы HTML, CSS и JS находятся в одной директории.</li>
+    <li>Откройте HTML-файл в браузере.</li>
+</ol>
+
+<h2>Преимущества использования таймера перехода</h2>
+
+<ul>
+    <li><strong>Повышение вовлеченности:</strong> Пользователи больше уделяют внимания контенту.</li>
+    <li><strong>Увеличение времени на сайте:</strong> Более длительное взаимодействие с сайтом.</li>
+    <li><strong>Контроль над временем пользователя:</strong> Возможность направлять пользователей к конкретным страницам.</li>
+</ul>
+
+<h2>Ограничения и рекомендации</h2>
+
+<p>Важно помнить о следующих моментах:</p>
+
+<ul>
+    <li><strong>Никогда не блокируйте важные действия:</strong> Не используйте таймер для критически важных действий.</li>
+    <li><strong>Внимание к UX:</strong> Убедитесь, что интерфейс удобен и информативен.</li>
+    <li><strong>Альтернативы:</strong> Рассмотрите альтернативные методы повышения вовлеченности.</li>
+</ul>
+
+<h2>Заключение</h2>
+
+<p>Таймер перехода - это мощный инструмент для улучшения взаимодействия пользователей с вашим сайтом. Он может быть особенно полезен для показа специальных предложений или важной информации.</p>
+
+<p>Не забывайте о балансе между эффективностью и комфортом пользователя. Используйте такие техники умеренно и только там, где они действительно добавляют ценность для вашего бизнеса.</p>
+
+<p>Этот пример демонстрирует, как легко можно реализовать таймер перехода с помощью современных технологий HTML, CSS и JavaScript. Вы можете дальше кастомизировать его под свои потребности и добавить дополнительные функции, такие как анимации или звуковые сигналы.</p></p>
+         <div class="mt-5">
+            
+            <span class="bg-primary rounded-pill px-2 py-1 me-2"><a class="text-decoration-none text-white card-text" href="/tags/frontend.html">frontend</a></span>
+            
+         </div>
+      </div>
+      <nav class="blog-nav nav nav-justified my-5">
+         
+         <a class="nav-link-prev nav-item nav-link rounded-left" href="/posts/blog-na-django.html">Предыдущая запись<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+         
+         
+      </nav>
+      <a href="/" target="_self" class="btn btn-danger">На главную</a>
+   </div>
+</article>
+
+         <footer class="footer text-center py-4">
+            <small class="copyright">Блог разработчика &copy; 2024 Eugene Onegin</small>
+         </footer>
+      </div>
+      
+<div id="config-panel" class="config-panel config-panel-hide d-none d-lg-block">
+   <div class="panel-inner">
+      <a id="config-trigger" class="config-trigger text-center" href="#"><i class="fas fa-cog mx-auto" data-fa-transform="down-6" ></i></a>
+      <h5 class="panel-title">Выберите тему</h5>
+      <ul id="color-options" class="list-inline mb-0">
+         <li class="theme-1 active list-inline-item"><a data-style="/static/assets/css/theme-1.css" href="#"></a></li>
+         <li class="theme-2  list-inline-item"><a data-style="/static/assets/css/theme-2.css" href="#"></a></li>
+         <li class="theme-3  list-inline-item"><a data-style="/static/assets/css/theme-3.css" href="#"></a></li>
+         <li class="theme-4  list-inline-item"><a data-style="/static/assets/css/theme-4.css" href="#"></a></li>
+         <li class="theme-5  list-inline-item"><a data-style="/static/assets/css/theme-5.css" href="#"></a></li>
+         <li class="theme-6  list-inline-item"><a data-style="/static/assets/css/theme-6.css" href="#"></a></li>
+         <li class="theme-7  list-inline-item"><a data-style="/static/assets/css/theme-7.css" href="#"></a></li>
+         <li class="theme-8  list-inline-item"><a data-style="/static/assets/css/theme-8.css" href="#"></a></li>
+         <li class="theme-9  list-inline-item"><a data-style="/static/assets/css/theme-9.css" href="#"></a></li>
+         <li class="theme-10  list-inline-item"><a data-style="/static/assets/css/theme-10.css" href="#"></a></li>
+      </ul>
+      <a id="config-close" class="close" href="#"><i class="fa fa-times-circle"></i></a>
+   </div>
+</div>
+      <script src="/static/assets/js/popper.min.js"></script> 
+      <script src="/static/assets/js/bootstrap.min.js"></script>
+      <script src="/static/assets/js/style-switcher.js"></script>
+      <script src="/static/assets/js/dark-mode.js"></script>  
+      <script src="/static/assets/js/highlight.min.js"></script>
+      <script src="/static/assets/js/blog.js"></script>  
+   </body>
+</html>
